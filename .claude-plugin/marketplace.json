@@ -1,0 +1,18 @@
+{
+  "name": "lean-project-docs",
+  "owner": {
+    "name": "wattich"
+  },
+  "metadata": {
+    "description": "Lean project docs skill for Claude Code (Thai)",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "lean-project-docs",
+      "source": "./",
+      "description": "Lean project docs for Claude Code: short CLAUDE.md, per-branch status files, append-only decisions, post-compact hook, orchestrator mode.",
+      "version": "1.0.0"
+    }
+  ]
+}

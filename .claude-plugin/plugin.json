@@ -1,0 +1,12 @@
+{
+  "name": "lean-project-docs",
+  "description": "Lean project docs for Claude Code: short CLAUDE.md, overwrite-only status files (per branch), append-only decisions, post-compact hook, and an orchestrator mode for driving other agent sessions. Instructions are in Thai.",
+  "version": "1.0.0",
+  "author": {
+    "name": "wattich"
+  },
+  "homepage": "https://github.com/wattich/lean-project-docs",
+  "repository": "https://github.com/wattich/lean-project-docs",
+  "license": "MIT",
+  "keywords": ["docs", "token", "compact", "status", "multi-branch", "orchestration"]
+}

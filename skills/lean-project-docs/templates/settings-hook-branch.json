@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|clear|compact",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cd \"$CLAUDE_PROJECT_DIR\" && b=$(git branch --show-current 2>/dev/null); f=\"docs/status/$(printf %s \"$b\" | tr / -).md\"; echo \"Branch: ${b:-(detached)}. Read this branch status before acting. Decisions: grep docs/decisions/. History: grep only.\"; echo \"=== $f\"; head -n 70 \"$f\" 2>/dev/null || echo '(no status file for this branch yet: create it from docs/status/README.md)'; echo '=== last 5 commits'; git log --oneline -5 2>/dev/null; true"
+          }
+        ]
+      }
+    ]
+  }
+}

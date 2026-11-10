@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|clear|compact",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cd \"$CLAUDE_PROJECT_DIR\" && echo \"Read this status before acting. Decisions: grep docs/decisions/. History: grep only.\"; echo '=== docs/STATUS-NOW.md'; head -n 70 docs/STATUS-NOW.md 2>/dev/null || echo '(no STATUS-NOW yet)'; echo '=== last 5 commits'; git log --oneline -5 2>/dev/null; true"
+          }
+        ]
+      }
+    ]
+  }
+}
